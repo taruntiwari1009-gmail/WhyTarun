@@ -18,3 +18,7 @@
 :root[data-theme="dark"] .work-panel,:root[data-theme="dark"] .life-panel{background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
 @media(max-width:760px){.hero::before,.hero::after{display:none}.home-shell{padding-bottom:12px}.intro-panel{backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%)}}
 @media(prefers-reduced-motion:reduce){.intro-panel:hover,.primary-link:hover,.icon-button:hover{transform:none}}
+
+/* Composition refinement: put the visual anchor in the open right side of the hero */
+.hero::before,.hero::after{display:none}
+@media(min-width:1100px){.home-shell::after{content:"";position:absolute;z-index:0;pointer-events:none;top:clamp(150px,20vh,230px);right:max(4vw,calc((100vw - var(--content-width))/2 - 12px));width:clamp(230px,24vw,350px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.82) 0,rgba(255,255,255,.42) 18%,rgba(220,199,165,.28) 38%,rgba(135,114,141,.14) 62%,transparent 72%);border:1px solid rgba(255,255,255,.62);box-shadow:inset 0 0 45px rgba(255,255,255,.34),0 30px 90px rgba(73,46,27,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.home-shell::before{content:"";position:absolute;z-index:0;pointer-events:none;top:clamp(160px,21vh,250px);right:max(3vw,calc((100vw - var(--content-width))/2 - 30px));width:clamp(270px,28vw,390px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(164,138,99,.14)}}
