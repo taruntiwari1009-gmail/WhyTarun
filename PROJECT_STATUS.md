@@ -1,13 +1,13 @@
 # Project Status — WhyTarun
 
-**Last updated:** Phase 1 baseline created  
-**Overall status:** Foundation documentation initialized; codebase and deployment/tooling verification still required.
+**Last updated:** Phase 2 scaffold created on feature branch  
+**Overall status:** Application shell code has been scaffolded; installation, build, browser, and accessibility verification are still pending.
 
 ## Phase tracker
-- [x] Phase 0 — Context & Inventory (marked complete by owner)
-- [ ] Phase 1 — Architecture & Design System (documents drafted; technical choices pending repository verification)
-- [ ] Phase 2 — Application Shell
-- [ ] Phase 3 — Home
+- [x] Phase 0 — Context & Inventory (owner-marked complete)
+- [x] Phase 1 — Architecture & Design System (owner-approved design direction and stack baseline)
+- [ ] Phase 2 — Application Shell (scaffold implemented; local verification pending)
+- [ ] Phase 3 — Home (full page build)
 - [ ] Phase 4 — The Work
 - [ ] Phase 5 — Journal
 - [ ] Phase 6 — Atlas
@@ -17,23 +17,27 @@
 - [ ] Phase 10 — QA & Hardening
 - [ ] Phase 11 — Launch
 
-## Phase 1 outputs
-- [x] Product principles and navigation architecture recorded
-- [x] Initial technical architecture proposed
-- [x] Visual direction and palette recorded
-- [x] Typography, surface, glass, theme, layout, motion conventions recorded
-- [x] Accessibility and quality gates recorded
-- [x] Initial ADRs documented
+## Phase 2 implementation
+- React + TypeScript + Vite starter
+- Tailwind CSS v4 integration
+- Route structure for all main navigation areas
+- Floating glass navigation and mobile menu
+- Light/dark theme toggle (not yet persisted)
+- Editorial home-shell/hero and Work/Life links
+- Shared footer, ambient gradient fields and glass cards
+- Motion entrance animation and reduced-motion stylesheet
+- Responsive CSS breakpoints and focus-visible styling
 
-## Still to verify before implementation
-- Repository setup and existing code (repository was empty at initialization)
-- Framework/build/test choices and dependency versions
-- Deployment platform, branch protections and CI/CD
-- Actual font choices and licenses
-- Routing/content validation implementation approach
-- Theme persistence approach
-- Map library choice (defer until Atlas implementation)
-- All public-facing content review
+## Pending verification
+- [ ] Install dependencies and generate package lock
+- [ ] Production build
+- [ ] Tests (test files not yet authored)
+- [ ] Desktop/tablet/mobile browser QA
+- [ ] Keyboard and accessibility review
+- [ ] Theme persistence/system preference handling
+- [ ] CI workflow
 
-## Next milestone
-Phase 1 technical verification and lock-in, then Phase 2 Application Shell. No production deployment without explicit approval.
+## Branch and release guardrails
+- Current implementation branch: phase-2/application-shell
+- No merge or deployment without owner approval
+- Placeholder routes/content are not approved for publication
