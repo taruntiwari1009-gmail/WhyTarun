@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
-import { Menu, X, Sun, Moon, ArrowUpRight } from "lucide-react";
+import { Menu, X, Sun, Moon, ArrowUpRight, ArrowDown, MapPin, BookOpen, Headphones, Sparkles } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import "./styles/app.css";
 
