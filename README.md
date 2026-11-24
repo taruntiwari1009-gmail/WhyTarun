@@ -2,25 +2,41 @@
 
 **A professional mind. A personal world.**
 
-WhyTarun is a personal editorial website connecting professional work, research, technology, projects, interests, experiences, and stories. It is intended to feel like a thoughtfully curated digital space—not a conventional résumé or template portfolio.
+WhyTarun is a personal website and living archive for work, books, music, places, writing, community and the things that make a life beyond a job title.
 
-## Design direction
+## Visual direction
 
-**Personal Editorial × Dusk Room × Glass** — editorial clarity with warm atmosphere, layered translucent glass surfaces, subtle blur and reflections, generous whitespace, expressive serif headlines, and calm sans-serif body typography. Parchment, espresso, walnut, muted olive, antique gold, lavender, and dusty rose form the palette. Glass is used with restraint so content remains readable and uncluttered.
+**Cinematic personal archive × independent publication × scrapbook.**
+
+The shared identity is a deep ink/navy foundation, expressive serif headlines, clear sans-serif interface text, documentary-style photography, subtle paper and film textures, and restrained coral/lavender accents. Individual sections have their own visual environment:
+
+- Home — cinematic, image-led introduction and visual index
+- Work — dark studio, career chapters and project stories
+- Bookshelf — warm library, searchable confirmed title catalogue
+- Listening Room — music lounge, photographic playlist sleeves and Apple Music links
+- Atlas — travel journal and seven confirmed destinations
+- Journal — paper-and-ink notebook, intentionally empty until original writing exists
+- About — personal interests and community record
+
+The light theme is an alternate reading mode, not a separate visual identity.
 
 ## Project status
 
-- Phase 0 — Context & Inventory: complete (public content still needs individual verification)
-- Phase 1 — Architecture & Design System: owner-approved
-- Phase 2 — Application Shell: scaffold in progress; install/build/browser/accessibility checks pending
-- No merge or production deployment has been authorized
+- Ground-up visual rebuild committed directly to `main`.
+- Existing routes and confirmed content retained.
+- Original Apple Music playlist URLs retained.
+- Provisional shelf guesses are not shown as confirmed reading history.
+- No deployment has been performed.
+- Production build and browser QA remain pending; see [design-qa.md](design-qa.md).
 
-## Documentation
-- [Architecture & Design System](docs/architecture-design-system.md)
-- [Design Tokens](docs/design-tokens.md)
-- [Architecture Decisions](docs/decisions/README.md)
-- [Phase 2 Application Shell](docs/phase-2-application-shell.md)
-- [Project Status](PROJECT_STATUS.md)
+## Development
+
+```bash
+npm install
+npm run dev
+npm run build
+```
 
 ## Content integrity
-Personal/professional content must be sourced and approved before publication. Never invent achievements, dates, book ownership, travel details, playlist tracklists, or outcomes. Protect employer/client confidentiality.
+
+Never invent achievements, dates, reading reflections, travel stories, playlist tracklists, photographs of the owner, or project outcomes. Keep employer/client details at a non-confidential level. Where personal notes are not available, leave room for the owner's words rather than writing them on their behalf.
