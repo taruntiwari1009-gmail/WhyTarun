@@ -3,6 +3,7 @@ import { Link, NavLink, Route, Routes } from "react-router-dom";
 import { Menu, X, Sun, Moon, ArrowUpRight, ArrowDown, MapPin, BookOpen, Headphones, Sparkles } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import "./styles/app.css";
+import { WorkPage, JournalPage, AtlasPage, BookshelfPage, ListeningRoomPage, AboutPage } from "./pages";
 
 const navigation=[{label:"Home",path:"/"},{label:"The Work",path:"/work"},{label:"Journal",path:"/journal"},{label:"Atlas",path:"/atlas"},{label:"Bookshelf",path:"/bookshelf"},{label:"Listening Room",path:"/listening-room"},{label:"About",path:"/about"}];
 const pageNames:Record<string,string>={work:"The Work",journal:"Journal",atlas:"Atlas",bookshelf:"Bookshelf","listening-room":"Listening Room",about:"About"};
@@ -44,14 +45,13 @@ export default function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<HomeV3 />} />
-        {Object.keys(pageNames).map((slug) => (
-          <Route
-            key={slug}
-            path={`/${slug}`}
-            element={<Placeholder slug={slug} />}
-          />
-        ))}
-        <Route path="*" element={<Placeholder slug="about" />} />
+        <Route path="/work" element={<WorkPage />} />
+        <Route path="/journal" element={<JournalPage />} />
+        <Route path="/atlas" element={<AtlasPage />} />
+        <Route path="/bookshelf" element={<BookshelfPage />} />
+        <Route path="/listening-room" element={<ListeningRoomPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<HomeV3 />} />
       </Routes>
       <Footer />
     </div>
