@@ -1,48 +1,44 @@
 # WhyTarun — Design Tokens
 
-**Status:** Phase 1 baseline. Tokens are design proposals; implementation may refine values after visual testing.
+**Status:** Implemented visual system; browser validation pending.
 
-## Color
-| Token | Value | Role |
-|---|---|---|
-| `color-paper` | `#F3E9D8` | Primary light background |
-| `color-sand` | `#DCC7A5` | Warm supporting surface |
-| `color-espresso` | `#36241C` | Primary dark text/surface |
-| `color-walnut` | `#6F5744` | Secondary dark surface |
-| `color-olive` | `#88765B` | Earthy accent |
-| `color-gold` | `#A48A63` | Quiet highlight |
-| `color-lavender` | `#87728D` | Accent |
-| `color-sage` | `#75806A` | Accent |
+## Core identity
 
-## Semantic roles
-Prefer semantic tokens such as `--background`, `--surface`, `--surface-raised`, `--text-primary`, `--text-secondary`, `--border-subtle`, `--accent`, `--focus-ring`, and `--shadow-soft` over direct palette references in components.
+- Base: ink / midnight navy `#0B0D12`
+- Secondary surface: blue-charcoal `#111720`
+- Primary text on dark: warm cream `#F4EEE7`
+- Paper surface: `#F3EADC`
+- Warm paper: `#E9DDCB`
+- Coral accent: `#F16D59`
+- Lavender accent: `#B58BF3`
+- Botanical accent: `#8FA58D`
+- Amber accent: `#D49A5D`
 
 ## Typography
-- Display: editorial serif.
-- Body and UI: sans-serif.
-- Accent: optional script/handwritten face, used sparingly.
-- Use a responsive type scale (CSS clamp), explicit line-height, and a readable measure.
-- Font families are not finalized until font availability, licensing, performance, and fallback behavior are checked.
 
-## Spacing and layout
-Establish a consistent 4px base rhythm; use named spacing tokens (micro, small, medium, large, section, page). Content width, side gutters, and breakpoint values are to be tuned during shell implementation.
+- Display: Playfair Display, Georgia fallback.
+- Body/UI: DM Sans, system sans fallback.
+- Metadata: DM Mono.
+- Headlines use responsive `clamp()` sizing and tight leading; body copy uses comfortable line-height and measure.
 
-## Shape
-Use restrained rounded corners. Do not default every element to a pill or large rounded card. Navigation and floating controls may use softer shapes; editorial content should primarily use borders and spacing.
+## Section colour worlds
 
-## Glass
-Glass is an effect, not a component default:
-- translucent espresso navigation surface
-- warm fine outline
-- blur kept moderate
-- ensure text contrast over every backdrop
-- fallback to solid surface where blur/transparency is unsupported or reduced
+- Home: ink, dusk, coral and mountain amber.
+- Work: charcoal/navy with lavender.
+- Bookshelf: warm timber, paper and amber.
+- Listening Room: plum, aubergine and warm amber.
+- Atlas: forest green and alpine blue.
+- Journal: ink, parchment and terracotta.
+- About: muted rose and warm cream.
 
-## Themes
-Create light/dark semantic mappings. Accent color remains restrained in both. Theme choice should not alter hierarchy or layout.
+## Layout and interaction
 
-## Motion
-Short, purposeful transitions; reduced-motion mode disables nonessential animation. No movement-only cues.
+- Wide content frame capped at 1320px with responsive side gutters.
+- Image-led sections use real photographic sources rather than CSS-drawn illustrations.
+- Cards and controls have visible hover, active and focus states.
+- Reduced-motion preference disables nonessential motion.
+- Dark is the default; light is an alternate reading mode.
 
-## Token implementation
-Once stack is confirmed, tokens should live in one central stylesheet or theme file. Component-specific styles should consume semantic tokens and not duplicate hex values.
+## Implementation
+
+Tokens live in `src/styles/tokens.css`; global composition and responsive components live in `src/styles/app.css`.
