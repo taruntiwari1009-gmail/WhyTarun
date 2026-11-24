@@ -36,4 +36,24 @@ function HomeV3(){return <motion.main className="home-shell home-page" initial={
 <section className="home-journal-band"><div className="journal-band-mark"><Sparkles size={18}/></div><div><span className="section-kicker">03 / NOTES TO SELF & THE WORLD</span><h2>Thoughts, in progress.</h2><p>Little reflections, observations, things I'm learning, and ideas I haven't quite figured out yet.</p></div><Link to="/journal" className="journal-cta">Visit the journal <ArrowUpRight size={16}/></Link></section><section className="home-closing"><p>Still becoming. Always curious.</p><Link to="/about" className="text-link">Get to know me <ArrowUpRight size={15}/></Link></section></motion.main>}
 function Placeholder({slug}:{slug:string}){const title=pageNames[slug]??"Page";return <main className="placeholder-page"><div className="eyebrow"><span className="eyebrow-dot"/> THE PERSONAL ARCHIVE</div><h1>{title}</h1><p>This corner is taking shape. More soon.</p><Link to="/" className="text-link">← Back home</Link></main>}
 function Footer(){return <footer className="site-footer"><span>WhyTarun © {new Date().getFullYear()}</span><span>A professional mind. A personal world.</span><a href="#top" aria-label="Back to top">↑</a></footer>}
-export default function App(){return <div className="app-frame" id="top"><div className="ambient ambient-one"/><div className="ambient ambient-two"/><Navigation/><Routes><Route path="/" element={<HomeV3/>}/>{Object.keys(pageNames).map(slug=><Route key={slug} path={"/"+slug} element={<Placeholder slug={slug}/>}/>)} /><Route path="*" element={<Placeholder slug="about"/>}/></Routes><Footer/></div>}
+export default function App() {
+  return (
+    <div className="app-frame" id="top">
+      <div className="ambient ambient-one" />
+      <div className="ambient ambient-two" />
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomeV3 />} />
+        {Object.keys(pageNames).map((slug) => (
+          <Route
+            key={slug}
+            path={`/${slug}`}
+            element={<Placeholder slug={slug} />}
+          />
+        ))}
+        <Route path="*" element={<Placeholder slug="about" />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
