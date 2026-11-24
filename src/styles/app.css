@@ -40,3 +40,6 @@
 /* Prevent the Listening Room preview chips from colliding with its CTA */
 .music-card .playlist-mini{padding-bottom:34px}
 @media(max-width:760px){.music-card .playlist-mini{padding-bottom:38px}}
+
+/* Keep the closing profile link and arrow on one aligned line */
+.home-closing .text-link{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
