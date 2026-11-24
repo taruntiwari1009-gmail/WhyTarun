@@ -36,3 +36,7 @@
 @media(max-width:950px){.hero-layout{grid-template-columns:1fr minmax(220px,.65fr);gap:0}.hero-art{min-height:270px}.project-grid{grid-template-columns:1fr 1fr}.life-grid{grid-template-columns:1fr 1fr}.atlas-card{grid-column:1/-1}}
 @media(max-width:760px){.home-hero-section{min-height:unset;padding-top:70px}.hero-layout{grid-template-columns:1fr}.hero-layout .hero{padding:24px 0 42px}.hero-art{min-height:210px;margin:0 auto 22px;width:min(100%,260px)}.hero-art-inner{max-width:245px}.art-label{font-size:12px}.scroll-cue{padding-bottom:26px}.home-section{padding:48px 0 58px}.section-heading{grid-template-columns:1fr;gap:16px;margin-bottom:24px}.section-heading h2{font-size:clamp(42px,12vw,60px)}.project-grid,.life-grid{grid-template-columns:1fr}.project-card{min-height:260px}.atlas-card{grid-column:auto}.life-card{min-height:280px}.home-journal-band{align-items:flex-start;flex-wrap:wrap;padding:24px;margin:8px 0 42px}.journal-cta{margin:12px 0 0}.home-closing{font-size:17px;gap:16px;flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.project-card:hover,.life-card:hover{transform:none}}
+
+/* Prevent the Listening Room preview chips from colliding with its CTA */
+.music-card .playlist-mini{padding-bottom:34px}
+@media(max-width:760px){.music-card .playlist-mini{padding-bottom:38px}}
