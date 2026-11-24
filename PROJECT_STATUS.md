@@ -1,19 +1,19 @@
 # Project Status — WhyTarun
 
-**Last updated:** Phase 3 Home implementation committed to isolated branch  
-**Overall status:** Phase 2 shell scaffold and Phase 3 Home page are implemented on isolated branches; local build and visual/accessibility verification remain pending.
+**Last updated:** Phases 4–9 dedicated pages implemented on isolated branch  
+**Overall status:** Phases 2–9 are implemented on isolated feature branches. Owner requested that build work continue without testing/validation; no merge or deployment has occurred.
 
 ## Phase tracker
 - [x] Phase 0 — Context & Inventory (owner-marked complete)
 - [x] Phase 1 — Architecture & Design System (owner-approved design direction and stack baseline)
 - [ ] Phase 2 — Application Shell (scaffold implemented; local verification pending)
 - [ ] Phase 3 — Home (implemented on isolated branch; local review pending)
-- [ ] Phase 4 — The Work
-- [ ] Phase 5 — Journal
-- [ ] Phase 6 — Atlas
-- [ ] Phase 7 — Bookshelf
-- [ ] Phase 8 — Listening Room
-- [ ] Phase 9 — About & Interests
+- [x] Phase 4 — The Work (dedicated page implemented; review pending)
+- [x] Phase 5 — Journal (editorial landing page implemented; entries await original writing)
+- [x] Phase 6 — Atlas (seven confirmed destinations added; dates/stories omitted)
+- [x] Phase 7 — Bookshelf (confirmed titles and provisional spine readings preserved; reconciliation pending)
+- [x] Phase 8 — Listening Room (eight Apple Music playlist links connected)
+- [x] Phase 9 — About & Interests (dedicated page implemented)
 - [ ] Phase 10 — QA & Hardening
 - [ ] Phase 11 — Launch
 
@@ -50,3 +50,14 @@
 - Responsive card layouts and dark-mode glass surfaces
 - Details documented in docs/phase-3-home.md
 - Local build/browser review pending; no merge or deployment authorized
+
+## Phases 4–9 implementation
+- Dedicated pages connected for The Work, Journal, Atlas, Bookshelf, Listening Room, and About
+- Work page includes professional timeline and high-level project summaries
+- Journal page is a designed editorial landing; no posts fabricated
+- Atlas contains seven confirmed places; no dates or trip narratives invented
+- Bookshelf preserves confirmed title entries plus provisional image-read entries clearly marked for verification
+- Listening Room links all eight supplied Apple Music playlists
+- About page includes interests and avoids unresolved education claims
+- Details and source caveats: docs/phases-4-9-content-pages.md
+- Build/tests/browser/accessibility validation intentionally deferred at owner request
