@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import { Menu, X, Sun, Moon, ArrowUpRight, ArrowDown, MapPin, BookOpen, Headphones, Sparkles } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
@@ -8,8 +8,9 @@ import { WorkPage, JournalPage, AtlasPage, BookshelfPage, ListeningRoomPage, Abo
 const navigation=[{label:"Home",path:"/"},{label:"The Work",path:"/work"},{label:"Journal",path:"/journal"},{label:"Atlas",path:"/atlas"},{label:"Bookshelf",path:"/bookshelf"},{label:"Listening Room",path:"/listening-room"},{label:"About",path:"/about"}];
 
 function Navigation(){
- const [menuOpen,setMenuOpen]=useState(false); const [theme,setTheme]=useState<"light"|"dark">("light");
- const toggleTheme=()=>{const next=theme==="light"?"dark":"light";setTheme(next);document.documentElement.dataset.theme=next;};
+ const [menuOpen,setMenuOpen]=useState(false); const [theme,setTheme]=useState<"light"|"dark">(()=>{const saved=localStorage.getItem("whytarun-theme");if(saved==="light"||saved==="dark")return saved;return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";});
+ useEffect(()=>{document.documentElement.dataset.theme=theme;localStorage.setItem("whytarun-theme",theme);},[theme]);
+ const toggleTheme=()=>setTheme(current=>current==="light"?"dark":"light");
  return <header className="site-header">
   <Link className="brand" to="/" onClick={()=>setMenuOpen(false)}><span className="brand-mark">WT</span><span>WhyTarun</span></Link>
   <nav className="desktop-nav glass" aria-label="Main navigation">{navigation.map(item=><NavLink key={item.path} to={item.path} end={item.path==="/"} className={({isActive})=>isActive?"nav-link active":"nav-link"}>{item.label}</NavLink>)}</nav>
@@ -32,9 +33,11 @@ function Footer(){return <footer className="site-footer"><span>WhyTarun © {new 
 export default function App() {
   return (
     <div className="app-frame" id="top">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
       <Navigation />
+      <div id="main-content" tabIndex={-1}>
       <Routes>
         <Route path="/" element={<HomeV3 />} />
         <Route path="/work" element={<WorkPage />} />
@@ -45,6 +48,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<HomeV3 />} />
       </Routes>
+      </div>
       <Footer />
     </div>
   );
