@@ -1,6 +1,7 @@
 import { useState, type CSSProperties, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { ArrowUpRight, MapPin, Headphones, Music2, Compass, BookMarked, PenLine, Database, Layers3, Network, Lightbulb, Heart, Sparkles, BriefcaseBusiness, BookOpen, Disc3 } from "lucide-react";
+import { ArrowUpRight, Music2, PenLine, Database, Layers3, Network, Lightbulb, Sparkles } from "lucide-react";
 
 const career=[
 {period:"MAR 2026 — PRESENT",role:"Visier Functional Expert Lead",company:"Sanofi · via ManpowerGroup",chapter:"A chapter in ownership",detail:"Moving closer to the systems behind the data. Working across Visier's functional and security model, Workday-connected changes, access structures, go-live support and hypercare.",thread:"Systems · Security · Ownership",tone:"career-sage"},
