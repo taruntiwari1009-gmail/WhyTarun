@@ -14,8 +14,8 @@
 - [x] Phase 7 — Bookshelf (confirmed titles and provisional spine readings preserved; reconciliation pending)
 - [x] Phase 8 — Listening Room (eight Apple Music playlist links connected)
 - [x] Phase 9 — About & Interests (dedicated page implemented)
-- [ ] Phase 10 — QA & Hardening
-- [ ] Phase 11 — Launch
+- [ ] Phase 10 — QA & Hardening (accessibility/theme metadata improvements implemented; validation deferred)
+- [ ] Phase 11 — Launch (release preparation documented; deployment intentionally not performed)
 
 ## Phase 2 implementation
 - React + TypeScript + Vite starter
@@ -61,3 +61,10 @@
 - About page includes interests and avoids unresolved education claims
 - Details and source caveats: docs/phases-4-9-content-pages.md
 - Build/tests/browser/accessibility validation intentionally deferred at owner request
+
+## Phases 10–11
+- Theme preference persistence and system-theme fallback added
+- Keyboard skip-to-content link added
+- Social sharing metadata added
+- Launch guardrails and release blockers documented in docs/phases-10-11-hardening-launch.md
+- Validation explicitly deferred per owner instruction; deployment not performed
