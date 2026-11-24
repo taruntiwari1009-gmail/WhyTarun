@@ -22,6 +22,16 @@ const playlists:[string,string][]=[
  ["Soft","https://music.apple.com/in/playlist/soft/pl.u-qxylEelT2ANorrq"],
  ["Soft Desi","https://music.apple.com/in/playlist/soft-desi/pl.u-XkD0vBrCD3XMkk7"]
 ];
+const playlistCovers=[
+ "https://images.unsplash.com/photo-1780305807144-0411e940d5ed?auto=format&fit=crop&w=900&q=85",
+ "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85",
+ "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85",
+ "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=85",
+ "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=85",
+ "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=85",
+ "https://images.unsplash.com/photo-1735909600958-f442498875f9?auto=format&fit=crop&w=900&q=85",
+ "https://images.unsplash.com/photo-1701607632237-4b50076614f7?auto=format&fit=crop&w=900&q=85"
+];
 const places=[["Chennai","Tamil Nadu"],["Jaipur","Rajasthan"],["Puducherry","Puducherry"],["Hyderabad","Telangana"],["Rishikesh","Uttarakhand"],["Bir","Himachal Pradesh"],["Varanasi","Uttar Pradesh"]] as const;
 const volunteering=[["PetFed","2023 · 2024 · 2025"],["India AI Summit","2026"],["Sundowner","2026"],["Sporting Club Delhi",""],["Prakash Publications","2025 · 2026"]] as const;
 const photo={
@@ -66,7 +76,7 @@ export function ListeningRoomPage(){
   <Intro index="03 / THE LISTENING ROOM" theme="music" title={<>A soundtrack for<br/><em>different selves.</em></>} subtitle="Eight saved playlists. Different moods, memories and versions of a day. Pick a sleeve and open the original on Apple Music."/>
   <section className="listening-hero"><img src={photo.music} alt="A record player in a warm, atmospheric listening room"/><div className="listening-hero-overlay"/><div className="listening-now"><span className="eyebrow light">CURRENTLY IN THE ROOM · 0{active+1}/08</span><h2>{name}</h2><p>One of eight saved listening spaces.</p><a href={url} target="_blank" rel="noreferrer" className="button button-cream">Open in Apple Music <ArrowUpRight size={16}/></a></div><div className="listening-stamp">SIDE A<br/>PLAY IT LOUD</div></section>
   <section className="playlist-section"><div className="browser-heading"><div><span className="eyebrow">THE PLAYLIST ARCHIVE</span><h2>Choose a <em>mood.</em></h2></div><div className="view-switch"><button className={view==="covers"?"active":""} onClick={()=>setView("covers")}>COVERS</button><button className={view==="index"?"active":""} onClick={()=>setView("index")}>INDEX</button></div></div>
-   {view==="covers"?<div className="playlist-grid">{playlists.map(([title],i)=><button key={title} onClick={()=>setActive(i)} className={active===i?"playlist-card active":"playlist-card"}><span className="playlist-no">SIDE A · 0{i+1}</span><div className={`playlist-artwork artwork-${i%4}`}><span>{title}</span><i/></div><span className="playlist-title">{title}</span><small>{active===i?"NOW SELECTED":"SELECT PLAYLIST"} <ArrowUpRight size={12}/></small></button>)}</div>:<div className="playlist-index">{playlists.map(([title],i)=><button key={title} className={active===i?"active":""} onClick={()=>setActive(i)}><span>0{i+1}</span><strong>{title}</strong><span>{active===i?"SELECTED":"OPEN PLAYLIST"}</span><ArrowUpRight size={15}/></button>)}</div>}
+   {view==="covers"?<div className="playlist-grid">{playlists.map(([title],i)=><button key={title} onClick={()=>setActive(i)} className={active===i?"playlist-card active":"playlist-card"}><span className="playlist-no">SIDE A · 0{i+1}</span><div className={`playlist-artwork artwork-${i%4}`}><img src={playlistCovers[i]} alt="" loading="lazy"/><span>{title}</span></div><span className="playlist-title">{title}</span><small>{active===i?"NOW SELECTED":"SELECT PLAYLIST"} <ArrowUpRight size={12}/></small></button>)}</div>:<div className="playlist-index">{playlists.map(([title],i)=><button key={title} className={active===i?"active":""} onClick={()=>setActive(i)}><span>0{i+1}</span><strong>{title}</strong><span>{active===i?"SELECTED":"OPEN PLAYLIST"}</span><ArrowUpRight size={15}/></button>)}</div>}
   </section>
  </motion.main>;
 }
