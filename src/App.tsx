@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
-import { Menu, X, Sun, Moon, ArrowUpRight, ArrowDown, MapPin, BookOpen, Headphones, Heart, Compass, Sparkles, BriefcaseBusiness, Music2 } from "lucide-react";
+import { Menu, X, Sun, Moon, ArrowUpRight, ArrowDown, MapPin, BookOpen, Headphones, Heart, Sparkles, BriefcaseBusiness } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import "./styles/app.css";
 import { WorkPage, JournalPage, AtlasPage, BookshelfPage, ListeningRoomPage, AboutPage } from "./pages";
